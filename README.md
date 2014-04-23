@@ -2,13 +2,13 @@
 # Sysdata-collector Usage Examples #
 ####################################
 
-[Test link](#help)
+[Print a help message](#Print a help message)
 
 
 
 
 
-### Print a help message [help]
+### Print a help message
 
 A list of the available command line options
 ```
