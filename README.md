@@ -2,20 +2,15 @@
 # Sysdata-collector Usage Examples #
 ####################################
 
-[metadata](#metadata)
+[Test link](#help)
 
 
-### Metadata
-asdasdasd
-asd
-as
-da
-sd
-as
-d
 
 
-### Print a list of the available command line options ###
+
+### Print a help message [help]
+
+A list of the available command line options
 ```
 $ ./sysdata-collector.py -h
 usage: sysdata-collector.py [-h] [-v] [-a] [-b FILE] [-c CHAR] [-d] [-e]
