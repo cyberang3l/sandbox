@@ -31,10 +31,12 @@ At this point you should test that you have a working tile server, that is able 
 
 1. Go again to the website http://extract.bbbike.org/ and choose the same part of the map that chose when you installed the tile server. This time, choose the format "*SRTM Europe PBF (25m)*" if your extract is located in Europe, or "*SRTM World PBF (40m)*" if your extract is located anywhere else in the world, and download the file. (Note: [Here](http://download.bbbike.org/osm/planet/srtm/), you can find the SRTM data for the whole planet if you chose to import the planet OSM file.)
 2. Add the following lines at the end of the files `/usr/share/osm2pgsql/default.style` and `/usr/share/osm2pgsql/osm2pgsql/default.style`. These lines will force *osm2pgsql* in the next step to generate three additional table columns in the database, that are needed for the SRTM data. (probably you don't need to add the lines to both of the files, but I don't know which is the correct file so I added the lines to both of them and it worked)
+3. 
     ```
     # Contour lines
     node,way    contour                 text    linear
     way         contour_ext             text    linear
     way         ele                     text    linear
     ```
+    
 3. Append the SRTM data into the database with the command `osm2pgsql --append --slim -c 18000 -d gis --number-processes 8 <srtm-data.pbf>`
